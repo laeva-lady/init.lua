@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":")
 
+vim.keymap.set("n", "<leader>o", ":Files<CR>")
 -- vim.keymap.set("x", "<leader>p", [["_dP]])
 -- vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
 
