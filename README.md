@@ -1,3 +1,14 @@
+# My nvim dotfile
+
+based on [ThePrimeagen's config](https://github.com/thePrimeagen/init.lua)
+
+most things changed are things i do not use or keybinds that i don't like and stuff..
+
+
+# original README.md below:
+
+---
+
 ### ThePrimeagen's init.lua
 Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 
