@@ -9,14 +9,14 @@ local set = vim.keymap.set
 
 set("n", "<leader>pv", vim.cmd.Ex)
 
-
-
-
 set("n", "!", ":!")
 set("n", ";", ":")
 set("v", ";", ":")
 
 set("n", "<C-s>", ":w<CR>")
+set("v", "<C-s>", "<ESC>:w<CR>")
+set("i", "<C-s>", "<ESC>:w<CR>")
+
 set("n", "<C-h>", "10h")
 set("n", "<C-j>", "10j")
 set("n", "<C-k>", "10k")
