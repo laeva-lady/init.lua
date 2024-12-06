@@ -5,43 +5,29 @@ vim.g.mapleader = " "
 
 
 
+local set = vim.keymap.set
+
+set("n", "<leader>pv", vim.cmd.Ex)
 
 
 
 
+set("n", "!", ":!")
+set("n", ";", ":")
+set("v", ";", ":")
 
+set("n", "<C-s>", ":w<CR>")
+set("n", "<C-h>", "10h")
+set("n", "<C-j>", "10j")
+set("n", "<C-k>", "10k")
+set("n", "<C-l>", "10l")
 
+set("i", "<C-c>", "<Esc>")
 
+set("n", "<leader>o", ":Files<CR>", { desc = "Open fzf" })
+set("n", "<leader>f", vim.lsp.buf.format, {desc="format"})
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
-
-vim.keymap.set("n", "!", ":!")
-vim.keymap.set("n", ";", ":")
-vim.keymap.set("v", ";", ":")
-
-vim.keymap.set("n", "<C-s>", ":w<CR>")
-
-vim.keymap.set("n", "<leader>o", ":Files<CR>")
--- vim.keymap.set("x", "<leader>p", [["_dP]])
--- vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
-
-vim.keymap.set("i", "<C-c>", "<Esc>")
-
-vim.keymap.set("n", "Q", "<nop>") -- define Q as having no actino whatsoever
-
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
--- kinda funny thing...
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
--- reload config
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
-
-
+set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", {desc="make it rain"});
 
 
 -- commands related to functions
@@ -62,7 +48,7 @@ vim.api.nvim_create_user_command(
     function(opts)
         -- Open the file using Okular with the provided argument
         local file = opts.args
-        vim.fn.system("silent okular.exe " .. vim.fn.shellescape(file) .. " &")
+        vim.fn.system("okular.exe " .. vim.fn.shellescape(file) .. " &")
     end,
     {
         desc = "Open file with Okular",
@@ -74,10 +60,7 @@ vim.api.nvim_create_user_command(
 -- vim.keymap.set("n", "<C-9>", ":Removeregisterednurse<CR>")
 -- vim.keymap.set("n", "<C-0>", ":SelectAll<CR>")
 
-vim.keymap.set("n", "<leader>re", removeRN)
-vim.keymap.set("n", "<leader>sa", selectALL)
+set("n", "<leader>re", removeRN)
+set("n", "<leader>sa", selectALL)
 
-
-
-
-vim.keymap.set("n", "<leader>mk", ":make<CR>")
+set("n", "<leader>mk", ":make<CR>")

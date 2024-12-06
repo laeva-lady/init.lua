@@ -23,6 +23,7 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 999
+vim.opt.sidescrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
@@ -32,4 +33,5 @@ vim.opt.updatetime = 50
 
 
 vim.opt.list = true
+vim.opt.listchars:append("space:·")
 vim.opt.listchars:append("space:·")
