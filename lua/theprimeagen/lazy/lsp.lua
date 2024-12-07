@@ -6,6 +6,7 @@ return {
 
     config = function()
         require("theprimeagen.configs.gopls")
+        require("theprimeagen.configs.sharp")
         require("conform").setup({
             formatters_by_ft = {}
         })
@@ -17,7 +18,7 @@ return {
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "rust_analyzer", "tinymist", "pyright", "tsserver", "bashls" },
+            ensure_installed = { "lua_ls", "rust_analyzer", "tinymist", "pyright", "ts_ls", "bashls" },
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
