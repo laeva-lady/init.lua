@@ -2,7 +2,7 @@
 
 based on [ThePrimeagen's config](https://github.com/thePrimeagen/init.lua)
 
-most things changed are things i do not use or keybinds that i don't like and stuff..
+most things changed are things i do not use or keybinds that i don't like or additional plugins i use
 
 
 # original README.md below:
