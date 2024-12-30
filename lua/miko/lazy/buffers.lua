@@ -4,7 +4,7 @@ return {
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
-            require("theprimeagen.configs.buffer")
+            require("miko.configs.buffer")
         end
     }
 }

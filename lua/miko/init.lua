@@ -1,6 +1,6 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
-require("theprimeagen.lazy_init")
+require("miko.set")
+require("miko.remap")
+require("miko.lazy_init")
 
 -- DO.not
 -- DO NOT INCLUDE THIS
@@ -14,7 +14,7 @@ require("theprimeagen.lazy_init")
 -- DO.not
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local ThePrimeagenGroup = augroup('Miko', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})

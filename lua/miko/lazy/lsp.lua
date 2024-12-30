@@ -5,8 +5,8 @@ return {
         "hrsh7th/nvim-cmp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip", "j-hui/fidget.nvim" },
 
     config = function()
-        require("theprimeagen.configs.gopls")
-        require("theprimeagen.configs.sharp")
+        require("miko.configs.gopls")
+        require("miko.configs.sharp")
         require("conform").setup({
             formatters_by_ft = {}
         })

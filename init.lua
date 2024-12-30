@@ -1,4 +1,4 @@
-require("theprimeagen")
+require("miko")
 
 -- system clipboard by default
 vim.opt.clipboard = "unnamedplus"
