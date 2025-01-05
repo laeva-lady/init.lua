@@ -1,9 +1,7 @@
 -- TODO: Clean this mess and put my own keybinds
 --      + add my custom function from lvim
 
--- vim.g.mapleader = " "
-
-
+vim.g.mapleader = " "
 
 local set = vim.keymap.set
 
@@ -44,10 +42,14 @@ local function selectALL()
     vim.cmd([[normal! ggVG]])
 end
 
+set("n", "<leader>re", removeRN)
+set("n", "<leader>sa", selectALL)
+
+set("n", "<leader>mk", ":make<CR>")
+
 vim.api.nvim_create_user_command("Seratchbuffer", ":e ~/scratch.md", { desc = "open scratch file" })
 vim.api.nvim_create_user_command("Chatgptprompt", ":e ~/chatprompt.md", { desc = "open chatgpt file" })
 vim.api.nvim_create_user_command("Todoprompt", ":e ~/todoAndNotes.md", { desc = "open todo file" })
-
 vim.api.nvim_create_user_command(
     "Latexcompile",
     function()
@@ -58,7 +60,6 @@ vim.api.nvim_create_user_command(
         desc = "Compile current file with LuaLaTex",
     }
 )
-
 vim.api.nvim_create_user_command(
     "Okular",
     function(opts)
@@ -72,7 +73,6 @@ vim.api.nvim_create_user_command(
         complete = "file", -- Use file name completion
     }
 )
-
 vim.api.nvim_create_user_command(
     "Rscript",
     function(opts)
@@ -86,17 +86,6 @@ vim.api.nvim_create_user_command(
         complete = "file", -- Use file name completion
     }
 )
-
--- vim.keymap.set("n", "<C-9>", ":Removeregisterednurse<CR>")
--- vim.keymap.set("n", "<C-0>", ":SelectAll<CR>")
-
-set("n", "<leader>re", removeRN)
-set("n", "<leader>sa", selectALL)
-
-set("n", "<leader>mk", ":make<CR>")
-
-
-
 vim.api.nvim_create_user_command(
     "Sioyek",
     function(opts)
