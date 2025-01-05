@@ -1,7 +1,7 @@
 -- TODO: Clean this mess and put my own keybinds
 --      + add my custom function from lvim
 
-vim.g.mapleader = " "
+-- vim.g.mapleader = " "
 
 
 
@@ -49,6 +49,17 @@ vim.api.nvim_create_user_command("Chatgptprompt", ":e ~/chatprompt.md", { desc =
 vim.api.nvim_create_user_command("Todoprompt", ":e ~/todoAndNotes.md", { desc = "open todo file" })
 
 vim.api.nvim_create_user_command(
+    "Latexcompile",
+    function()
+        vim.cmd("write")
+        vim.fn.system("lualatex " .. vim.fn.shellescape(vim.api.nvim_buf_get_name(0)))
+    end,
+    {
+        desc = "Compile current file with LuaLaTex",
+    }
+)
+
+vim.api.nvim_create_user_command(
     "Okular",
     function(opts)
         -- Open the file using Okular with the provided argument
@@ -83,3 +94,20 @@ set("n", "<leader>re", removeRN)
 set("n", "<leader>sa", selectALL)
 
 set("n", "<leader>mk", ":make<CR>")
+
+
+
+vim.api.nvim_create_user_command(
+    "Sioyek",
+    function(opts)
+        -- Open the file using Okular with the provided argument
+        local file = opts.args
+        vim.fn.system("/mnt/c/dev/sioyek-release-windows/sioyek.exe " .. vim.fn.shellescape(file) .. " &")
+    end,
+    {
+        desc = "Open file with Sioyek",
+        nargs = 1,         -- Require one argument (the file name)
+        complete = "file", -- Use file name completion
+    }
+)
+
