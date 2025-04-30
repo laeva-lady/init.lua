@@ -32,12 +32,17 @@ vim.opt.foldlevelstart = 99
 
 vim.opt.updatetime = 50
 
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 
 
 vim.opt.list = true
 vim.opt.listchars:append("space:·")
-
+-- vim.opt.listchars:append("nbsp:␣")
+-- vim.opt.listchars:append("rail:~")
+-- vim.opt.listchars:append("ol:↴")
+-- vim.opt.listchars:append("xtends:>")
+-- vim.opt.listchars:append("recedes:<")
+-- vim.opt.listchars:append("zws:⭲ ")
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

@@ -1,9 +1,9 @@
-require("miko.set")
-require("miko.remap")
-require("miko.lazy_init")
+require("alice.set")
+require("alice.remap")
+require("alice.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
-local MikoGroup = augroup('Miko', {})
+local AliceGroup = augroup('alice', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -30,21 +30,21 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = MikoGroup,
+    group = AliceGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
 autocmd('BufEnter', {
-    group = MikoGroup,
+    group = AliceGroup,
     callback = function()
-        vim.cmd.colorscheme("kanagawa")
+        vim.cmd.colorscheme("rose-pine")
     end
 })
 
 
 autocmd('LspAttach', {
-    group = MikoGroup,
+    group = AliceGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

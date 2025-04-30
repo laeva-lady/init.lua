@@ -4,7 +4,7 @@ return {
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
-            require("miko.configs.buffer")
+            require("alice.configs.buffer")
         end
     }
 }

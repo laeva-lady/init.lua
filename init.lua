@@ -1,4 +1,4 @@
-require("miko")
+require("alice")
 
 -- system clipboard by default
 vim.opt.clipboard = "unnamedplus"

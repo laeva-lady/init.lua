@@ -7,18 +7,13 @@ local set = vim.keymap.set
 
 set("n", "<leader>pv", vim.cmd.Ex)
 
-set("n", "!", ":!")
+
 set("n", ";", ":")
 set("v", ";", ":")
 
 set("n", "<C-s>", ":w<CR>")
 set("v", "<C-s>", "<ESC>:w<CR>")
-set("i", "<C-s>", "<ESC>:w<CR>")
-
-set("n", "<C-h>", "10h")
-set("n", "<C-j>", "10j")
-set("n", "<C-k>", "10k")
-set("n", "<C-l>", "10l")
+set("i", "<C-s>", "<ESC>:w<CR>i")
 
 set("i", "<C-c>", "<Esc>")
 
@@ -29,7 +24,7 @@ set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", { desc = "make
 
 set("n", "<C-n>", ":bnext<CR>")
 set("n", "<C-p>", ":bprev<CR>")
-set("n", "<C-x>", ":bdelete<CR>")
+set("n", "<C-f>", ":bdelete<CR>")
 
 set("n", "<C-o>", "<nop>")
 
@@ -45,7 +40,11 @@ end
 set("n", "<leader>re", removeRN)
 set("n", "<leader>sa", selectALL)
 
+set("n", "<leader>spq", "vapgq")
+
 set("n", "<leader>mk", ":make<CR>")
+
+
 
 vim.api.nvim_create_user_command("Seratchbuffer", ":e ~/scratch.md", { desc = "open scratch file" })
 vim.api.nvim_create_user_command("Chatgptprompt", ":e ~/chatprompt.md", { desc = "open chatgpt file" })

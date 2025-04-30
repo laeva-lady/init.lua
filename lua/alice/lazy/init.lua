@@ -8,7 +8,7 @@ return {
     {
         "jose-elias-alvarez/null-ls.nvim",
         config = function ()
-            require"miko.configs.null"
+            require"alice.configs.null"
         end
     },
 
